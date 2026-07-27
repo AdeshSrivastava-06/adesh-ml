@@ -80,4 +80,4 @@ if st.sidebar.button('Run Algorithm'):
     plt.xlabel("Col1")
     plt.ylabel("Col2")
     orig = st.pyplot(fig)
-    st.subheader("Accuracy for Decision Tree  " + str(round(accuracy_score(y_test, y_pred), 2)))
+    st.subheader("Accuracy for Logistic Regression " + str(round(accuracy_score(y_test, y_pred), 2)))
