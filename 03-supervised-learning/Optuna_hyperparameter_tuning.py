@@ -1,3 +1,7 @@
+"""Optuna is one of the best hyperparameter tuning techniques because it uses Bayesian Optimization . The main logic is that it finds a function if we are tuning hyperparameters. It will make sure that there exists at least some mathematical relationship between the accuracy and both the parameters, and it will find the best value accordingly. It will make a graph by selecting a random value, and it will continue doing it. It is a smart algorithm because it looks at the previous points and accordingly plots the graph and gives the desired result."""
+
+
+
 import optuna
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
