@@ -1,0 +1,37 @@
+Hyper parameter tuning is done because in most of the ML ago and deepL models we want to find the the best value of the hyperparameter provided with sklearn documentation so that It gives the best result because choosing the correct model is important, but what is more important is choosing the right number, the right integer value of the parameters, so that we will get the highest accuracy for our model. 
+
+The three methods used are:
+1. GridSearchCV
+Starting with grid search CV, here we provide multiple parameters A, B, and C, and in the list we provide each value for it, and it tries all the possible combinations.
+If There are 2 hyperparameters, A and B, and for each hyperparameter there are 3 values. The combination it will draw is 9 combinations. It will take a lot of time and it is computationally costly as well. 
+
+2. RandomSearchCV
+For random search CV, it will not try all the possible combinations. It will randomly select some of the combinations and it will give the desired result. One of the drawbacks is that it may miss one combination that can give the higher accuracy. So Both grid search cv and random search cv are kind of dumb hyperparameter tuning algorithms because it does not see the previous values and it just keeps on going. 
+
+3. Optuna
+Optuna is one of the best hyperparameter tuning techniques because it uses Bayesian Optimization . The main logic is that it finds a function if we are tuning hyperparameters. It will make sure that there exists at least some mathematical relationship between the accuracy and both the parameters, and it will find the best value accordingly. It will make a graph by selecting a random value, and it will continue doing it. It is a smart algorithm because it looks at the previous points and accordingly plots the graph and gives the desired result. 
+
+  Key terms in Optuna
+
+1-study:
+  
+A study is just like a task in which I am doing hyperparameter tuning, for example, for a random forest model in which I am selecting the max depth and the n estimators. The entire process of this is called a study. It is just like finding the best parameter of a model, so this process is a study. 
+
+2-Trial:
+
+A trial is a single iteration of the optimization process where a specific set of hyperparameters is evaluated. Each trial runs the objective function once with a distinct set of hyperparameters. It's like using a different value every time, so each set of values is a trial. 
+
+3-Trial Parameters :
+
+These are specific hyperparameter values chosen during each trial. 
+
+4-Objective Function :
+
+The objective function is the function to be optimized, minimized, or maximized during hyperparameter search. It takes hyperparameter as an input and returns a value such as accuracy, loss, or any other matrix that Optuna tries to optimize. 
+so it's like a particular matrix we can take example of accuracy which my model is trying to maximize so this is nothing but objective function 
+
+5-sampler :
+
+A sampler is the algorithm that suggests which hyperparameter should be evaluated next. Optuna uses the tree-structured Parzen estimator by default, but it also supports other sampling methods like random search or even custom samplers. So it is just like the main logic which is used to select which hyperparameter should be evaluated next by looking at the previous values. 
+
+The best feature of optuna is define by run i.e It creates dynamic search spaces. In short, if we are doing hyperparameter tuning, it will also give us the result of which model is performing better. In one hyperparameter tuning, we can provide n number of algorithms, and it will give the best algorithm and, for that algorithm, the best hyperparameter. Here both algorithms and The search spaces are the hyperparameters. 
