@@ -17,7 +17,7 @@ def- it is a technique to standardize the independent features present in the da
 ~~also called z-score tesing(as mentioned in statistics.txt)  
 and after standardizing some cols(neumerical) the mean will 0 and std=1(standard normal variate) here we only do mean centering and std scaling
 
-  normaization
+  normalization
 ~~it is a technique often applied as a part of data preparation for machine learning,the goal of normailzation is to change the values of neumeric cols in the dataset to use a common scale without losing the inforamtion(mostly to eliminate the units like kg,rupess and to sut keep the magnitude)
 ~it includes the 
 min-max-scaling(on every value one formula is applied->
